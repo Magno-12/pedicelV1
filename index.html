@@ -41,7 +41,18 @@
     <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <script src="js/html5shiv.min.js"></script>
 		<![endif]-->
-</head>
+    <!-- Load Stripe.js on your website. -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-196499281-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-196499281-1');
+</script>
+
+  </head>
 
 <body>
   <a href="https://wa.me/34611608520?text=Buenas,%20deseo%20información%20sobre%20alguno%20de sus%20servicios"
@@ -337,12 +348,12 @@
             allowfullscreen></iframe>
         </div>
         <div>
-          <h2>Our main goal is to help you achieve your digital marketing objectives.</h2>
+          <h2>Our main goal is to help you achieve your digital marketing objectives. 2.0</h2>
 
           <p class="block-lg">We are an international digital marketing agency with the objective of helping you make your business’
             vision a reality. For this, we will create a Marketing strategy tailored to you.
             We will understand your needs, become part of your team and make an impact on your business’ goals. You are
-            not a client, you are our partner. And our goals are not satisfied until you achieve yours.</p>
+            not a client, you are our partner. And our goals are not satisfied until you achieve yours. 2.0</p>
           <p> </p>
           <h2>A walk through a better approach to online marketing in 3 simple steps:</h2>
           <div class="button-group"><a class="button button-secondary button button-sm" href="#get-in-touch"
@@ -462,6 +473,7 @@
           data-custom-scroll-to="get-in-touch">free 30 min consultation</a></div>
       </p>
     </section>
+
     <section class="section section-xl bg-primary bg-image bg-image-cover text-center" data-image-cover="8"
       style="background-image: url(images/blackcho.png)">
       <div class="shell">
@@ -626,6 +638,7 @@
           });
 
         </script>
+
       </div>
       </div>
       <div class="row row-lg row-40 row-lg-60 row-xl-80 justify-content-center justify-content-xxl-end">
@@ -678,15 +691,118 @@
         </div>
         <!-- Newsletter-->
         <div class="col-md-10 col-lg-5 col-xl-4 col-xxl-3">
-          <h5>Newsletter</h5>
-          <div class="heading-divider"></div>
-          <p>Keep up with our always upcoming product features and technologies.</p>
+          <h5>one click payment</h5>
+          <!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  id="checkout-button-price_1JKR5UJ76EmB9LVWg8AZoB6H"
+  role="link"
+  type="button"
+>
+  Checkout
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_51JBK9rJ76EmB9LVWk6Le8HrTzaZu7cNOrQA2SnF1w3JiiQpDVjPm1I45sOx2LLM6KNaLM3ddwfQsWGTwaogDuf6900k1oEWdsx');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1JKR5UJ76EmB9LVWg8AZoB6H');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1JKR5UJ76EmB9LVWg8AZoB6H', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://pedicelmarketing.com/index.html/index.html',
+      cancelUrl: 'https://pedicelmarketing.com/index.html/index.html',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
+
           <!-- Mailchimp-->
           <div class="form-wrap form-wrap-validation">
           </div>
           </form>
         </div>
         <div class="col-sm-12 col-md-10 col-lg-12 col-xxl-8">
+          <h5>one click payment 2</h5>
+          <p> </p>
+<!-- Load Stripe.js on your website. -->
+<script src="https://js.stripe.com/v3"></script>
+
+<!-- Create a button that your customers click to complete their purchase. Customize the styling to suit your branding. -->
+<button
+  style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em;cursor:pointer"
+  id="checkout-button-price_1JKR6DJ76EmB9LVWCkiEGFRz"
+  role="link"
+  type="button"
+>
+  Checkout
+</button>
+
+<div id="error-message"></div>
+
+<script>
+(function() {
+  var stripe = Stripe('pk_live_51JBK9rJ76EmB9LVWk6Le8HrTzaZu7cNOrQA2SnF1w3JiiQpDVjPm1I45sOx2LLM6KNaLM3ddwfQsWGTwaogDuf6900k1oEWdsx');
+
+  var checkoutButton = document.getElementById('checkout-button-price_1JKR6DJ76EmB9LVWCkiEGFRz');
+  checkoutButton.addEventListener('click', function () {
+    /*
+     * When the customer clicks on the button, redirect
+     * them to Checkout.
+     */
+    stripe.redirectToCheckout({
+      lineItems: [{price: 'price_1JKR6DJ76EmB9LVWCkiEGFRz', quantity: 1}],
+      mode: 'payment',
+      /*
+       * Do not rely on the redirect to the successUrl for fulfilling
+       * purchases, customers may not always reach the success_url after
+       * a successful payment.
+       * Instead use one of the strategies described in
+       * https://stripe.com/docs/payments/checkout/fulfill-orders
+       */
+      successUrl: 'https://pedicelmarketing.com/index.html/index.html',
+      cancelUrl: 'https://pedicelmarketing.com/index.html/index.html',
+    })
+    .then(function (result) {
+      if (result.error) {
+        /*
+         * If `redirectToCheckout` fails due to a browser or network
+         * error, display the localized error message to your customer.
+         */
+        var displayError = document.getElementById('error-message');
+        displayError.textContent = result.error.message;
+      }
+    });
+  });
+})();
+</script>
         </div>
       </div>
     </div>
